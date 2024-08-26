@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:handless="clr-namespace:Khadamati_App.Handlers"
+             Shell.NavBarIsVisible="False"
+             x:Class="Khadamati_App.SignUp">
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="25" Padding="20">
+
+            <Label Text="تسجيل جديد" FontFamily="Cairo-Bold" FontSize="28" TextColor="{StaticResource Primary}" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Frame Padding="2" CornerRadius="3" HeightRequest="60" BorderColor="Gray" >
+                <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                    <Image VerticalOptions="Center" Source="user.png" HeightRequest="25" WidthRequest="25" />
+                    <handless:BorderlessEntry x:Name="FullName" VerticalOptions="Center" FontFamily="Cairo-Bold"  Placeholder="الاسم الكامل" MaxLength ="25"  Grid.Column="1" />
+                </Grid>
+            </Frame>
+
+            <Frame Padding="2" CornerRadius="3" HeightRequest="60" BorderColor="Gray" >
+                <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                    <Image VerticalOptions="Center" Source="national_id.png" HeightRequest="25" WidthRequest="25" />
+                    <handless:BorderlessEntry x:Name="NationalIdNumber" VerticalOptions="Center" FontFamily="Cairo-Bold" Placeholder=" رقم الهوية الوطنية" Keyboard="Numeric" MaxLength="9"  Grid.Column="1" />
+                </Grid>
+            </Frame>
+
+            <Frame Padding="2" CornerRadius="3" HeightRequest="60" BorderColor="Gray" >
+                <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                    <Image VerticalOptions="Center" Source="mobile.png" HeightRequest="25" WidthRequest="25" />
+                    <handless:BorderlessEntry x:Name="PhoneNumber" VerticalOptions="Center" Keyboard="Telephone" FontFamily="Cairo-Bold" Placeholder="رقم الهاتف المحمول"  MaxLength="10" Grid.Column="1" />
+                </Grid>
+            </Frame>
+
+            <Frame Padding="2" CornerRadius="3" HeightRequest="60" BorderColor="Gray" >
+                <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                    <Image VerticalOptions="Center" Source="adresse.png" HeightRequest="25" WidthRequest="25" />
+                    <Picker x:Name="AddressPicker" VerticalOptions="Center" FontFamily="Cairo-Bold" Title="-اختر العنوان الرئيسي-" Grid.Column="1" SelectedIndexChanged="OnAddressSelected">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>كروم الغرابة</x:String>
+                                <x:String>القرنة</x:String>
+                                <x:String>اسطاس</x:String>
+                                <x:String>وسط البلد</x:String>
+                                <x:String>العقبة</x:String>
+
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+            </Frame>
+
+            <!-- حقل لإضافة العنوان الثانوي يظهر بعد اختيار العنوان الرئيسي -->
+            <Frame Padding="2" CornerRadius="3" HeightRequest="50" BorderColor="Gray" IsVisible="False" x:Name="SecondaryAddressFrame">
+                <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                    <Image VerticalOptions="Center"  HeightRequest="25" WidthRequest="25" />
+                    <handless:BorderlessEntry x:Name="SecondaryAddressEntry" VerticalOptions="Center" Keyboard="Text" FontFamily="Cairo-Bold" Placeholder="أضف عنوان ثانوي (اختياري)" MaxLength="30" Grid.Column="1" />
+                </Grid>
+            </Frame>
+
+            <Frame Padding="2" CornerRadius="3" HeightRequest="60" BorderColor="Gray" >
+                <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                    <Image VerticalOptions="Center" Source="password.png" HeightRequest="25" WidthRequest="25" />
+                    <handless:BorderlessEntry x:Name="Password" VerticalOptions="Center" FontFamily="Cairo-Bold" Placeholder="كلمة المرور" IsPassword="True" Grid.Column="1" />
+                </Grid>
+            </Frame>
+
+            <Frame Padding="2" CornerRadius="3" HeightRequest="60" BorderColor="Gray" >
+                <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                    <Image VerticalOptions="Center" Source="password.png" HeightRequest="25" WidthRequest="25" />
+                    <handless:BorderlessEntry x:Name="confirmPassword" VerticalOptions="Center" FontFamily="Cairo-Bold" Placeholder=" تأكيد كلمة المرور " IsPassword="True" Grid.Column="1" />
+                </Grid>
+            </Frame>
+
+            <Button x:Name="Register" CornerRadius="0" HeightRequest="60" FontFamily="Cairo-Bold" Text="تسجيل" FontSize="20" FontAttributes="Bold" Clicked="OnSubmitClicked" />
+
+            <HorizontalStackLayout Spacing="10">
+                <Label FontAttributes="Bold" TextColor="Gray" FontFamily="Cairo-Bold" Text="لديك حساب بالفعل؟" VerticalTextAlignment="Center" />
+                <Label Text="تسجيل الدخول" FontFamily="Cairo-Bold" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource Primary}" />
+                <HorizontalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignIn" />
+                </HorizontalStackLayout.GestureRecognizers>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

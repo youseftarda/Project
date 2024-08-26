@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Khadamati_App.Views.TrackingServices"
+                              Shell.NavBarIsVisible="True"
+     Shell.BackgroundColor="White"
+     BackgroundColor="White"
+      Shell.ForegroundColor="Black"
+     Shell.TabBarIsVisible="False"
+             FlowDirection="RightToLeft"
+     >
+
+    <Shell.TitleView>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label Text="تتبع خدماتي"
+           FontFamily="Cairo-Bold"
+           FontSize="24"
+           TextColor="Black"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           AbsoluteLayout.LayoutBounds="0.3, 0.1, -1, -1"
+           AbsoluteLayout.LayoutFlags="PositionProportional" />
+        </AbsoluteLayout>
+    </Shell.TitleView>
+    
+   
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout Spacing="20">
+               
+ 
+                <Grid Margin="5,20,5,0" ColumnDefinitions="Auto, *">
+                    <Label Text="الشكوات المقدمة "
+                           FontSize="18"
+                           FontFamily="Cairo-Bold"
+                           TextColor="Black"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Grid.Column="0" />
+
+               
+                </Grid>
+
+                <ScrollView Orientation="Vertical">
+                    <Grid HeightRequest="200" BackgroundColor="White" Padding="0">
+                        <!-- الترويسة -->
+                        <Grid Padding="10, 5" ColumnDefinitions="Auto, *, *, *" BackgroundColor="LightGray" VerticalOptions="Start">
+                            <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Grid.ColumnSpan="4" />
+                            <Label Text="نوع الشكوى"
+                   FontSize="16"
+                   FontFamily="Cairo-Bold"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   Grid.Column="1"/>
+                            <Label Text="تفاصيل الشكوى"
+                   FontSize="16"
+                   FontFamily="Cairo-Bold"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   Grid.Column="2"/>
+                            <Label Text="الحالة"
+                   FontSize="16"
+                   FontFamily="Cairo-Bold"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   Grid.Column="3"/>
+                        </Grid>
+
+                        <!-- البيانات مع التمرير -->
+                        <StackLayout>
+                            <!-- رأس الجدول الثابت -->
+                            <Grid ColumnDefinitions="Auto, *, *, *" Padding="10, 5" BackgroundColor="LightGray">
+                                <!-- حدود الأعمدة للرأس -->
+                                <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="0"/>
+                                <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="1"/>
+                                <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="2"/>
+
+                                <!-- محتوى الرأس -->
+                                <Label Text="نوع الشكوى"
+               FontSize="16"
+               FontFamily="Cairo-Bold"
+               TextColor="Black"
+               VerticalOptions="Center"
+               HorizontalOptions="Start"
+               Grid.Column="1"/>
+                                <Label Text="تفاصيل الشكوى"
+               FontSize="16"
+               FontFamily="Cairo-Bold"
+               TextColor="Black"
+               VerticalOptions="Center"
+               HorizontalOptions="Start"
+               Grid.Column="2"/>
+                                <Label Text="الحالة"
+               FontSize="16"
+               FontFamily="Cairo-Bold"
+               TextColor="Black"
+               VerticalOptions="Center"
+               HorizontalOptions="Start"
+               Grid.Column="3"/>
+
+                                <!-- الحدود السفلية للرأس -->
+                                <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Grid.ColumnSpan="4"/>
+                            </Grid>
+
+                            <!-- محتوى الـ CollectionView -->
+                            <CollectionView x:Name="ServicesCollectionView"
+                    VerticalScrollBarVisibility="Always"
+                    HorizontalScrollBarVisibility="Always"
+                    BackgroundColor="Transparent"
+                    HeightRequest="200">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid ColumnDefinitions="Auto, *, *, *" Padding="10, 5" BackgroundColor="White">
+                                            <!-- حدود الأعمدة -->
+                                            <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="0"/>
+                                            <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="1"/>
+                                            <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="2"/>
+
+                                            <!-- محتوى الصف -->
+                                            <Label Text="{Binding TypeOfComplaint}"
+                           FontSize="16"
+                           FontFamily="Cairo-Regular"
+                           TextColor="Black"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Grid.Column="1"/>
+                                            <Label Text="{Binding ComplaintDetails}"
+                           FontSize="16"
+                           FontFamily="Cairo-Regular"
+                           TextColor="Black"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Grid.Column="2"/>
+                                            <Label Text="{Binding StatusText}"
+                           FontSize="16"
+                           FontFamily="Cairo-Regular"
+                           TextColor="Green"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Grid.Column="3"/>
+
+                                            <!-- الحدود السفلية للصف -->
+                                            <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Grid.ColumnSpan="4"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </Grid>
+                </ScrollView>
+
+
+                <Grid Margin="5,20,5,0" ColumnDefinitions="Auto, *">
+                    <Label Text="طلبات الكهرباء/المياه المقدمة"
+                          FontSize="18"
+                          FontFamily="Cairo-Bold"
+                          TextColor="Black"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Start"
+                          Grid.Column="0" />
+
+                </Grid>
+
+                <ScrollView Orientation="Vertical">
+                    <Grid HeightRequest="200" BackgroundColor="White" Padding="0">
+                        <!-- الترويسة -->
+                        <Grid Padding="10, 5" ColumnDefinitions="Auto, *, *, *" BackgroundColor="LightGray" VerticalOptions="Start">
+                            <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Grid.ColumnSpan="4" />
+                            <Label Text="نوع الطلب"
+     FontSize="16"
+     FontFamily="Cairo-Bold"
+     TextColor="Black"
+     VerticalOptions="Center"
+     HorizontalOptions="Start"
+     Grid.Column="1"/>
+                            <Label Text="رخصة البناء"
+     FontSize="16"
+     FontFamily="Cairo-Bold"
+     TextColor="Black"
+     VerticalOptions="Center"
+     HorizontalOptions="Start"
+     Grid.Column="2"/>
+                            <Label Text="الحالة"
+     FontSize="16"
+     FontFamily="Cairo-Bold"
+     TextColor="Black"
+     VerticalOptions="Center"
+     HorizontalOptions="Start"
+     Grid.Column="3"/>
+                        </Grid>
+
+                        <!-- البيانات مع التمرير -->
+                        <StackLayout>
+                            <!-- رأس الجدول الثابت -->
+                            <Grid ColumnDefinitions="Auto, *, *, *" Padding="10, 5" BackgroundColor="LightGray">
+                                <!-- حدود الأعمدة للرأس -->
+                                <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="0"/>
+                                <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="1"/>
+                                <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="2"/>
+
+                                <!-- محتوى الرأس -->
+                                <Label Text="نوع الطلب"
+ FontSize="16"
+ FontFamily="Cairo-Bold"
+ TextColor="Black"
+ VerticalOptions="Center"
+ HorizontalOptions="Start"
+ Grid.Column="1"/>
+                                <Label Text="رخصة البناء"
+ FontSize="16"
+ FontFamily="Cairo-Bold"
+ TextColor="Black"
+ VerticalOptions="Center"
+ HorizontalOptions="Start"
+ Grid.Column="2"/>
+                                <Label Text="الحالة"
+ FontSize="16"
+ FontFamily="Cairo-Bold"
+ TextColor="Black"
+ VerticalOptions="Center"
+ HorizontalOptions="Start"
+ Grid.Column="3"/>
+
+                                <!-- الحدود السفلية للرأس -->
+                                <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Grid.ColumnSpan="4"/>
+                            </Grid>
+
+                            <!-- محتوى الـ CollectionView -->
+                            <CollectionView x:Name="ServicesCollectionView2"
+      VerticalScrollBarVisibility="Always"
+      HorizontalScrollBarVisibility="Always"
+      BackgroundColor="Transparent"
+      HeightRequest="200">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid ColumnDefinitions="Auto, *, *, *" Padding="10, 5" BackgroundColor="White">
+                                            <!-- حدود الأعمدة -->
+                                            <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="0"/>
+                                            <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="1"/>
+                                            <BoxView Color="Gray" WidthRequest="1" HorizontalOptions="End" VerticalOptions="FillAndExpand" Grid.Column="2"/>
+
+                                            <!-- محتوى الصف -->
+                                            <Label Text="{Binding RequestType}"
+             FontSize="16"
+             FontFamily="Cairo-Regular"
+             TextColor="Black"
+             VerticalOptions="Center"
+             HorizontalOptions="Start"
+             Grid.Column="1"/>
+                                            <Label Text="{Binding BuildingPermit}"
+             FontSize="16"
+             FontFamily="Cairo-Regular"
+             TextColor="Black"
+             VerticalOptions="Center"
+             HorizontalOptions="Start"
+             Grid.Column="2"/>
+                                            <Label Text="{Binding StatusText}"
+             FontSize="16"
+             FontFamily="Cairo-Regular"
+             TextColor="Green"
+             VerticalOptions="Center"
+             HorizontalOptions="Start"
+             Grid.Column="3"/>
+
+                                            <!-- الحدود السفلية للصف -->
+                                            <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Grid.ColumnSpan="4"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </Grid>
+                </ScrollView>
+               
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

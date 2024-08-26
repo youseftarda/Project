@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:Khadamati_App.Views"
+             x:Class="Khadamati_App.MainPage"
+             Shell.NavBarIsVisible="False"
+             
+             FlowDirection="RightToLeft"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid HeightRequest="300" >
+
+                <Grid   >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="225"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Row="0" Grid.Column="0"
+x:Name="backgroundImage"
+Source="taf.png"
+                />
+
+
+
+
+                </Grid >
+
+                <Grid  Padding="10" RowSpacing="5">
+                    <Grid.RowDefinitions >
+                        <RowDefinition  Height="55" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="160"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label  Text="بلدية تفوح" Grid.Row="0" Grid.Column="0"  FontSize="20"
+                       VerticalOptions="Start" HorizontalOptions="Center" FontFamily="Cairo-Bold"/>
+                    <Label Text="مرحبا بك في تطبيق خدماتي" Grid.Row="1" Grid.Column="0"  FontFamily="Cairo-Medium"
+        HorizontalOptions="Start" VerticalOptions="End"/>
+                    <Label x:Name="LoginLabel" 
+       Text="تسجيل الدخول" 
+       Grid.Row="1" Grid.Column="0"   
+       FontFamily="Cairo-Medium"
+       HorizontalOptions="End" 
+       VerticalOptions="EndAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapped_LoginOrLogout"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Frame  Grid.Row="2" Grid.Column="0" HasShadow="True" Padding="10,15">
+
+                        <Grid RowSpacing="5"  >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="90"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="الوصول السريع" TextColor="{StaticResource Primary}" Grid.Row="0" Grid.Column="0" 
+                               HorizontalOptions="Start"   FontFamily="Cairo-Regular"/>
+                            <Frame   Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" BackgroundColor="{StaticResource Primary}" CornerRadius="4">
+
+
+
+                                <Grid  >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition  />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <VerticalStackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Start">
+                                        <Label   Text="جدول المياه" FontFamily="Cairo-Bold" FontSize="15" />
+
+
+
+                                        <Label  Text="بلدة تفوح" FontFamily="Cairo-Regular" FontSize="13"  />
+                                    </VerticalStackLayout >
+                                    <Image Source="water_pipe.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Margin="5" >
+                                        <Image.Behaviors>
+                                            <toolkit:IconTintColorBehavior TintColor="{StaticResource White}"/>
+                                        </Image.Behaviors>
+                                    </Image>
+
+                                </Grid>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+
+                            <Frame   Grid.Row="1" Grid.Column="0" HorizontalOptions="End" BackgroundColor="{StaticResource Secondary}"  CornerRadius="4">
+
+
+
+                                <Grid  >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition  />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <VerticalStackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Start">
+                                        <Label   Text="تواصل معنا" FontFamily="Cairo-Bold" FontSize="15"/>
+
+                                        <Label  Text="وسائل متنوعة" FontFamily="Cairo-Regular" FontSize="13"  />
+                                    </VerticalStackLayout >
+                                    <Image Source="contact_us.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Margin="5" >
+                                        <Image.Behaviors>
+                                            <toolkit:IconTintColorBehavior TintColor="{StaticResource White}"/>
+                                        </Image.Behaviors>
+                                    </Image>
+
+                                </Grid>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </Grid>
+
+                       
+                    </Frame>
+                </Grid>
+
+            </Grid>
+
+            <Grid Padding="10" RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="170"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Text="آخر الاخبار" Grid.Row="0" Grid.Column="0" TextColor="Black"  FontFamily="Cairo-Medium"/>
+                <Frame Grid.Row="1" Grid.Column="0" HasShadow="True">
+
+                </Frame>
+            </Grid>
+            <Grid Padding="10" RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="170"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Text="آخر الاعلانات" Grid.Row="0" Grid.Column="0" TextColor="Black"  FontFamily="Cairo-Medium"/>
+                <Frame Grid.Row="1" Grid.Column="0" HasShadow="True">
+
+                </Frame>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

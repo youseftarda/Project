@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Khadamati_App.Views.NotificationPage"
+             >
+    <StackLayout Spacing="20" >
+        <Label 
+            Text="تجد هنا آخر الاشعارات" TextColor="red" HorizontalOptions="Center" FontFamily="Cairo-Bold" />
+     
+        <Frame Padding="200" WidthRequest="350"  HasShadow="True">
+
+        </Frame>
+    </StackLayout>
+</ContentPage>

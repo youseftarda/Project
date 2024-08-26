@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander"
+            Shell.NavBarIsVisible="False"
+            FlowDirection="LeftToRight"
+            x:Class="Khadamati_App.Views.FlayoutMenu"
+              >
+
+    <StackLayout>
+       
+        <Grid >
+            <!-- Background Image -->
+           
+            <StackLayout Padding="5, 50, 25, 25" Spacing="15" VerticalOptions="Start">
+
+
+                <!-- First Item -->
+                <Grid ColumnDefinitions="Auto, *" VerticalOptions="Start">
+                    <Image Source="back.png" WidthRequest="20" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" />
+                    <Label Text="حسابي" FontSize="Medium" FontFamily="Cairo-Medium" HorizontalOptions="End" TextColor="Black" VerticalOptions="Start" Margin="10, 5, 40, 0" Grid.Column="1" />
+                    <Image Source="myaccount.png" WidthRequest="30" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="3" />
+                </Grid>
+                <!-- Separator Line -->
+
+                <BoxView HeightRequest="0.5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 0" />
+               
+                    <Grid ColumnDefinitions="Auto, *" VerticalOptions="Start">
+                        <Image Source="back.png" WidthRequest="20" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" />
+                        <Label Text="الأخبار والإعلانات" FontSize="Medium" FontFamily="Cairo-Medium" HorizontalOptions="End" TextColor="Black" VerticalOptions="Start" Margin="10, 5, 40, 0" Grid.Column="1" />
+                        <Image Source="information.png" WidthRequest="30" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="3" />
+                    </Grid>
+               
+                <!-- Separator Line -->
+                <BoxView HeightRequest="0.5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 0" />
+                <!-- Third Item -->
+                <ContentView>
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnButtonClicked" />
+                    </ContentView.GestureRecognizers>
+                    <Grid ColumnDefinitions="Auto, *" VerticalOptions="Start">
+                    <Image Source="back.png" WidthRequest="20" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" />
+                    <Label Text="تتبع خدماتي" FontSize="Medium" FontFamily="Cairo-Medium" HorizontalOptions="End" TextColor="Black" VerticalOptions="Start" Margin="10, 5, 40, 0" Grid.Column="1" />
+                    <Image Source="myservice.png" WidthRequest="30" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="3" />
+                </Grid>
+                </ContentView>
+                <!-- Separator Line -->
+                <BoxView HeightRequest="0.5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 0" />
+
+                <Grid ColumnDefinitions="Auto, *" VerticalOptions="Start">
+                    <Image Source="back.png" WidthRequest="20" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" />
+                    <Label Text="الوظائف الشاغرة " FontSize="Medium" FontFamily="Cairo-Medium" HorizontalOptions="End" TextColor="Black" VerticalOptions="Start" Margin="10, 5, 40, 0" Grid.Column="1" />
+                    <Image Source="job.jpg" WidthRequest="30" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="3" />
+                </Grid>
+
+            </StackLayout>
+        </Grid>
+       
+
+    </StackLayout>
+</ContentPage>

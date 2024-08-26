@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Khadamati_App.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Khadamati_App.Views"   
+    xmlns:local="clr-namespace:Khadamati_App"
+    FlowDirection="RightToLeft"
+    Shell.TabBarTitleColor="{StaticResource Primary}"
+    Shell.NavBarIsVisible="True"  >
+
+   
+
+
+
+
+    <!-- TabBar -->
+    <TabBar>
+        <Tab Title="الرئيسية" StyleId="Cairo-Medium" Icon="homee">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="الخدمات"  Icon="briefcase">
+            <ShellContent ContentTemplate="{DataTemplate views:Services}" />
+        </Tab>
+        <Tab Title="الاشعارات" Icon="notificationn">
+            <ShellContent ContentTemplate="{DataTemplate views:NotificationPage}" />
+        </Tab>
+        <Tab Title="المزيد" Icon="menu">
+            <ShellContent ContentTemplate="{DataTemplate views:FlayoutMenu}" />
+        </Tab>
+    </TabBar>
+
+    <ShellContent Route="watertable" ContentTemplate="{DataTemplate views:Water_Table}" />
+    <ShellContent Route="contactus" ContentTemplate="{DataTemplate views:Contact_Us}" />
+    <ShellContent Route="mainpage" ContentTemplate="{DataTemplate local:MainPage}" />
+    <ShellContent Route="login" ContentTemplate="{DataTemplate local:LogIn}" />
+    <!-- Flyout Footer -->
+   
+
+</Shell>    

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Khadamati_App.Views.Services"
+             Shell.NavBarIsVisible="False"
+             FlowDirection="RightToLeft"
+            
+            >
+    <VerticalStackLayout>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="الخدمات" Grid.Row="0" Grid.Column="0"  TextColor="Black" FontFamily="Cairo-Medium" FontSize="30" HorizontalOptions="Center" />
+        </Grid>
+
+
+        <ScrollView Margin="55,25" >
+
+            <Grid  RowSpacing="30" ColumnSpacing="50">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="110"/>
+                    <RowDefinition Height="110"/>
+                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid  Grid.Row="0" Grid.Column="0"  RowSpacing="40" >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Padding="0" Grid.Row="0" Grid.Column="0" HeightRequest="70" WidthRequest="70"  VerticalOptions="Start" HasShadow="True" >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapped_subscription"/>
+                        </Frame.GestureRecognizers>
+                        <Image Source="subscription.png" HorizontalOptions="Center" VerticalOptions="Center"  />
+                    </Frame>
+
+                    <Label Text="اشتراك كهرباء/مياه" Grid.Row="1" Grid.Column="0" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" FontFamily="Cairo-SemiBold"/>
+
+
+                </Grid>
+                
+               
+                <Grid  Grid.Row="0" Grid.Column="1"  RowSpacing="10" >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Padding="0" Grid.Row="0" Grid.Column="0" HeightRequest="70" WidthRequest="70"  VerticalOptions="Start" HasShadow="True" >
+                       
+                        <Image Source="clearance.png" HorizontalOptions="Center" VerticalOptions="Center"  />
+                    </Frame>
+
+
+                    <Label Text="طلب براءة ذمة" Grid.Row="1" Grid.Column="0" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" FontFamily="Cairo-SemiBold"/>
+
+
+                </Grid>
+                <Grid   Grid.Row="1" Grid.Column="0"  RowSpacing="10">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Padding="0"  Grid.Row="0" Grid.Column="0" HeightRequest="70" WidthRequest="70"  VerticalOptions="Start" HasShadow="True" >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapped_complaint"/>
+                        </Frame.GestureRecognizers>
+                        <Image Source="complaint.png" HorizontalOptions="Center" VerticalOptions="Center"  />
+                    </Frame>
+
+
+                    <Label Text="تقديم شكوى" Grid.Row="1" Grid.Column="0" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="End" FontFamily="Cairo-SemiBold"/>
+
+
+                </Grid>
+
+                <Grid   Grid.Row="1" Grid.Column="1"  RowSpacing="10">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Padding="0"  Grid.Row="0" Grid.Column="0" HeightRequest="70" WidthRequest="70"  VerticalOptions="Start" HasShadow="True" >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapped_suggestion"/>
+                        </Frame.GestureRecognizers>
+                        <Image Source="suggestion.png" HorizontalOptions="Center" VerticalOptions="Center"  />
+                    </Frame>
+
+
+                    <Label Text="تقديم اقتراح" Grid.Row="1" Grid.Column="0" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="End" FontFamily="Cairo-SemiBold"/>
+
+
+                </Grid>
+
+
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>

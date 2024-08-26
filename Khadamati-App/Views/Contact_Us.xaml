@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Khadamati_App.Views.Contact_Us"
+              Shell.NavBarIsVisible="True"
+             Shell.BackgroundColor="White"
+             BackgroundColor="White"
+              Shell.ForegroundColor="Black"
+             Shell.TabBarIsVisible="False"
+             
+             
+             >
+
+    <Shell.TitleView>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label Text="تواصل معنا"
+                   FontFamily="Cairo-Bold"
+                   FontSize="24"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   AbsoluteLayout.LayoutBounds="0.3, 0.1, -1, -1"
+                   AbsoluteLayout.LayoutFlags="PositionProportional" />
+        </AbsoluteLayout>
+    </Shell.TitleView>
+
+    <!-- تخصيص زر الرجوع -->
+    
+    
+    
+    <ScrollView>
+        <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- First Frame -->
+            <Frame Grid.Row="0" Grid.Column="0"  HeightRequest="150"  WidthRequest="168" HasShadow="True"  Padding="15">
+                <StackLayout>
+                    <Image Source="oip.jpg" Aspect="AspectFit" HeightRequest="30"  WidthRequest="30"/>
+                    <Label Text="+97022963214" TextColor="Black" FontSize="Small" Margin="15"  HorizontalOptions="Center" FontFamily="Cairo-Medium" />
+                    <Label Text="رقم الفاكس" TextColor="Black" HorizontalOptions="Center" FontSize="Medium" FontFamily="Cairo-Regular" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Second Frame -->
+            <Frame Grid.Row="0" Grid.Column="1"  HeightRequest="150" WidthRequest="168" HasShadow="True"  Padding="15">
+                <StackLayout>
+                    <Image Source="phone.png" Aspect="AspectFit" HeightRequest="30"  WidthRequest="30"/>
+                    <Label Text="+97022945555" TextColor="Black" HorizontalOptions="Center" Margin="15" FontSize="Small" FontFamily="Cairo-Medium" />
+                    <Label Text="هاتف البلدية الأرضي" HorizontalOptions="Center" TextColor="Black" FontSize="Subtitle" FontFamily="Cairo-Regular" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Third Frame -->
+            <Frame Grid.Row="1" Grid.Column="0" HasShadow="True" HeightRequest="150" WidthRequest="168" Padding="15">
+                <StackLayout Spacing="3">
+                    <Image Source="facebook.png" Aspect="AspectFit" HeightRequest="30"  WidthRequest="30" />
+                    <Label Text="https://www.fb.com/R.Municipality" HorizontalOptions="Center" TextColor="Black"  FontSize="Small" FontFamily="Cairo-Medium" />
+                    <Label Text="صفحة الفيسبوك " TextColor="Black" HorizontalOptions="Center" FontSize="Medium" FontFamily="Cairo-Regular" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Fourth Frame -->
+            <Frame Grid.Row="1" Grid.Column="1" HasShadow="True" HeightRequest="150" WidthRequest="168" Padding="15">
+                <StackLayout>
+                    <Image Source="emailcontact.png" Aspect="AspectFit" HeightRequest="30"  WidthRequest="30"/>
+                    <Label Text="info@ramallah.ps" TextColor="Black" HorizontalOptions="Center" Margin="14" FontSize="Small" FontFamily="Cairo-Medium" />
+                    <Label Text="البريد الإلكتروني " TextColor="Black" HorizontalOptions="Center"  FontSize="Medium" FontFamily="Cairo-Regular" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Fifth Frame -->
+            <Frame Grid.Row="2" Grid.Column="0" HasShadow="True" HeightRequest="150" WidthRequest="168" Padding="15">
+                <StackLayout >
+                    <Image Source="youtube.png" Aspect="AspectFit" HeightRequest="30"  WidthRequest="30"/>
+                    <Label Text="ramallahmunicipality" TextColor="Black" HorizontalOptions="Center" Margin="3,14" FontSize="Small" FontFamily="Cairo-Medium" />
+                    <Label Text="صفحة اليوتيوب " TextColor="Black" HorizontalOptions="Center"  FontSize="Medium" FontFamily="Cairo-Regular" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Sixth Frame -->
+            <Frame Grid.Row="2" Grid.Column="1" HasShadow="True" HeightRequest="150" WidthRequest="168" Padding="15" >
+                <StackLayout>
+                    <Image Source="instagram.png" Aspect="AspectFit" HeightRequest="30"  WidthRequest="30" />
+                    <Label Text="@ramallahmunicipality" TextColor="Black" FontSize="Small" HorizontalOptions="Center" Margin="2"  FontFamily="Cairo-Medium" />
+                    <Label Text="صفحة الأنستاغرام" TextColor="Black" FontSize="Medium"  HorizontalOptions="Center" FontFamily="Cairo-Regular" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Seventh Frame -->
+            <Frame Grid.Row="3" Grid.Column="0" HasShadow="True" HeightRequest="150" WidthRequest="168" Padding="15" >
+                <StackLayout>
+                    <Image Source="phone.png" Aspect="AspectFit" HeightRequest="30"  WidthRequest="30"/>
+                    <Label Text="+180010101" TextColor="Black" FontSize="Small" HorizontalOptions="Center" Margin="15"  FontFamily="Cairo-Medium" />
+                    <Label Text="الرقم المجاني " TextColor="Black" FontSize="Medium" HorizontalOptions="Center"   FontFamily="Cairo-Regular" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Eighth Frame -->
+            <Frame Grid.Row="3" Grid.Column="1" HasShadow="True" HeightRequest="150" WidthRequest="168" Padding="15">
+                <StackLayout>
+                    <Image Source="hospital.png" Aspect="AspectFit"  HeightRequest="30"  WidthRequest="30"/>
+                    <Label Text="115" TextColor="Black" FontSize="Small" HorizontalOptions="Center" Margin="15" FontFamily="Cairo-Medium" />
+                    <Label Text="رقم الطوارئ" TextColor="Black" HorizontalOptions="Center"  FontSize="Medium" FontFamily="Cairo-Regular" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>

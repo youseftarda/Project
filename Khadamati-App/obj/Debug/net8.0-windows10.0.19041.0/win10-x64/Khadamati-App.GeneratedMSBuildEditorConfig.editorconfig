@@ -1,0 +1,115 @@
+is_global = true
+build_property.TargetFramework = net8.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Khadamati_App
+build_property.ProjectDir = C:\Users\msi\Desktop\Khadamati-App\Khadamati-App\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/LogIn.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.LogIn.xaml
+build_metadata.AdditionalFiles.TargetPath = LogIn.xaml
+build_metadata.AdditionalFiles.RelativePath = LogIn.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/SignUp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.SignUp.xaml
+build_metadata.AdditionalFiles.TargetPath = SignUp.xaml
+build_metadata.AdditionalFiles.RelativePath = SignUp.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/SuccessPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.SuccessPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = SuccessPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = SuccessPopup.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Views/Complaint.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Views.Complaint.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Complaint.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Complaint.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Views/Contact_Us.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Views.Contact_Us.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Contact_Us.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Contact_Us.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Views/FlayoutMenu.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Views.FlayoutMenu.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FlayoutMenu.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FlayoutMenu.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Views/NotificationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Views.NotificationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\NotificationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\NotificationPage.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Views/Services.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Views.Services.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Services.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Services.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Views/Suggestion.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Views.Suggestion.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Suggestion.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Suggestion.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Views/TrackingServices.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Views.TrackingServices.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TrackingServices.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TrackingServices.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Views/UnifiedSubscriptionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Views.UnifiedSubscriptionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UnifiedSubscriptionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UnifiedSubscriptionPage.xaml
+
+[C:/Users/msi/Desktop/Khadamati-App/Khadamati-App/Views/Water_Table.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Khadamati_App.Views.Water_Table.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Water_Table.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Water_Table.xaml

@@ -1,0 +1,98 @@
+@Khadamati_API_HostAddress = http://127.0.0.1:31317
+
+
+
+GET {{Khadamati_API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{Khadamati_API_HostAddress}}/api/Account/register
+Content-Type: application/json
+
+{
+    "FullName": "rt",
+    "NationalIdNumber": "11143348",
+    "PhoneNumber": "123-456-7890",
+    "Address": "123 Main St, Anytown, USA",
+    "Password": "Password123!"
+}
+
+
+
+
+###
+
+
+
+
+DELETE {{Khadamati_API_HostAddress}}/api/account/delete/2
+
+
+
+###
+
+POST {{Khadamati_API_HostAddress}}/api/account/register
+Content-Type: application/json
+
+{
+  //RegisterModel
+}
+
+###
+
+POST {{Khadamati_API_HostAddress}}/api/account/register
+Content-Type: application/json
+
+{
+  //RegisterModel
+}
+
+###
+
+POST {{Khadamati_API_HostAddress}}/api/Account/login
+Content-Type: application/json
+{
+ 
+
+}
+
+
+###
+
+POST {{Khadamati_API_HostAddress}}/api/account/login
+Content-Type: application/json
+
+{
+  //LoginModel
+}
+
+###
+
+POST {{Khadamati_API_HostAddress}}/api/account/login
+Content-Type: application/json
+
+{
+  //LoginModel
+}
+
+###
+
+POST {{Khadamati_API_HostAddress}}/api/servicerequests
+Content-Type: application/json
+
+{
+  //ServiceRequest
+}
+
+###
+
+
+POST {{Khadamati-API_HostAddress}}/api/servicerequests
+Content-Type: application/json
+
+{
+  //ServiceRequest
+}
+
+###

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Khadamati_App.Views.Suggestion"
+                      Shell.TabBarIsVisible="False"
+             FlowDirection="RightToLeft"
+             Shell.NavBarIsVisible="True"
+             Shell.BackgroundColor="White"
+             BackgroundColor="White"
+             Shell.ForegroundColor="Gray" >
+
+    <Shell.TitleView>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label Text="الاقتراحات"
+       FontFamily="Cairo-Bold"
+       FontSize="24"
+       TextColor="{StaticResource Primary}"
+       HorizontalOptions="Center"
+       VerticalOptions="Center"
+       AbsoluteLayout.LayoutBounds="0.3, 0.1, -1, -1"
+       AbsoluteLayout.LayoutFlags="PositionProportional" />
+        </AbsoluteLayout>
+    </Shell.TitleView>
+
+
+    <ScrollView Grid.Row="1" BackgroundColor="White" >
+        <StackLayout Spacing="25" Padding="20">
+            <StackLayout Spacing="10">
+               
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="موضوع الاقتراح" TextColor="Black" FontFamily="Cairo-Regular" FontSize="20" />
+                    <Frame Padding="0" CornerRadius="3" HeightRequest="60" BorderColor="Gray" >
+                        <Entry x:Name="SubjectEntry"  FontSize="15"
+                               PlaceholderColor="Gray" Placeholder="حدد عنوان مناسب للاقتراح " FontFamily="Cairo-Medium" MaxLength="20" />
+                    </Frame>
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="رقم الهاتف" TextColor="Black" FontFamily="Cairo-Regular" FontSize="20" />
+                    <Frame Padding="0" CornerRadius="3" HeightRequest="60" BorderColor="Gray" >
+                        <Entry x:Name="PhoneNumberEntry"   FontSize="15"
+                PlaceholderColor="Gray" Placeholder="05********" FontFamily="Cairo-Medium" Keyboard="Telephone" MaxLength="10" />
+
+                    </Frame>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="توضيح الاقتراح" TextColor="Black" FontFamily="Cairo-Regular" FontSize="20" />
+                    <Frame Padding="0" CornerRadius="3" HeightRequest="100" BorderColor="Gray" >
+                        <Editor x:Name="SuggestionTextEntry"  
+ PlaceholderColor="Gray" Placeholder="محتوى الاقتراح"  FontFamily="Cairo-Medium" MaxLength="50" />
+
+                    </Frame>
+                </VerticalStackLayout>
+                <VerticalStackLayout >
+                    <Image Source="add_photo.png" />
+                </VerticalStackLayout>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Button HorizontalOptions="FillAndExpand" CornerRadius="3" FontFamily="Cairo-Bold" Text="تقديم الاقتراح" Clicked="OnSendClicked" FontSize="20" FontAttributes="Bold" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+
+

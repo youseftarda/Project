@@ -1,0 +1,56 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Khadamati_App"
+             x:Class="Khadamati_App.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="Label"
+>
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+
+            </Style>
+
+
+            <Style TargetType="TabBar">
+
+                <Setter Property="Shell.TabBarTitleColor"
+Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor"
+Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarUnselectedColor"
+Value="{StaticResource Gray500}" />
+
+            </Style>
+            
+            
+            
+
+            <!-- new code -->
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <!-- Define a style for entries -->
+            <Style TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="Gray" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+
+
+
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
